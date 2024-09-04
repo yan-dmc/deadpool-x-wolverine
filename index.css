@@ -1,0 +1,704 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+@font-face {
+    font-family: adventure;
+    src: url(./fonts/Adventure.otf);
+}
+
+@font-face {
+    font-family: deadpool;
+    src: url(./fonts/rogueherosemital.ttf);
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-color: rgb(99, 40, 40); */
+    background-color: #3D0B10;
+    
+}
+
+header {
+    z-index: 2000;
+    position: fixed;
+    background-color:#a31f2a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 0%;
+    margin: 2rem 1rem 0rem 0rem;
+    border-radius: 40px;
+    /* 
+    padding: 1rem 0rem 1rem 0rem; */
+}
+
+.home-icon img {
+    width: 10rem;
+    position: absolute;
+    left: calc(-50%);
+    top: -22.5rem;
+    rotate: -20deg;
+    transition: top .4s;
+
+    animation: home-icon 1.5s infinite linear alternate;
+}
+
+@keyframes home-icon {
+    0% {rotate:-20deg;}
+    10% {rotate:-19deg;}
+    25% {rotate:-13deg;}
+    50% {rotate:0deg;}
+    75% {rotate:13deg;}
+    90% {rotate:19deg;}
+    100% {rotate:20deg;}
+}
+
+.home-icon img:hover {
+    cursor: pointer;
+    top: calc(-21rem);
+    transition: all .8s;
+}
+
+.header-list {
+    /* background-color: aqua; */
+    display: flex;
+    color: rgb(255, 255, 255);
+
+    font-size: 1.5rem;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.header-list li {
+    /* background-color: aqua; */
+    padding: 1.2rem 1rem 1.2rem 1rem;
+    font-family: deadpool;
+    text-shadow: 2px 2px 1px black;
+}
+
+/* .header-list li a {
+    padding: 1.2rem 1rem 1.2rem 1rem;
+} */
+
+.header-list li hr {
+    transform: scaleX(0);
+    transition: all .2s;
+}
+
+.header-list li:hover{
+    cursor: pointer;
+
+    /* background-color: hsl(12, 81%, 32%);
+    border: solid 0px black;
+    border-radius: 20rem; */
+}
+
+.header-list li:active {
+    background-color: hsl(355, 68%, 33%);
+    color: hsl(0, 0%, 66%);
+}
+
+.header-list li:hover > hr {
+    transform: scaleX(1);
+    transition: all .4s;
+}
+
+.home {    
+    box-shadow: inset 0px 0px 200px 50px rgb(30, 3, 3);
+    height: 44.45rem;
+    background-image: linear-gradient(-45deg,#a31f2a 65%, #EAC80A 30%);
+
+    overflow: hidden;
+}
+
+#shadow {
+    position: absolute;
+    /* box-shadow: inset 0px 0px 50px 50px #3D0B10; */
+    box-shadow: 0px -40px 15px -20px #3d0b10 inset;
+    height: 44.45rem;
+    width: 100%;
+    z-index: 200;
+}
+
+
+.deadpool-logo img {
+    width: 23rem;
+    padding: 13.7rem;
+    padding-bottom: 1rem;
+    margin-left: 40%;
+    margin-top: -3%;
+}
+
+.home-img {
+    position: absolute;
+    z-index: 105;
+    height: 44.45rem;
+
+    overflow: hidden;
+}
+
+.home-img img {
+    width: 48rem;
+
+    margin-top: -1.5rem;
+}
+
+.home-text {
+    color: white;
+    padding: 13.7rem;
+    padding-top: 0rem;
+    margin-left: 40%;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    opacity: 0%;
+
+    animation: vinheta2;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: .7s;
+}
+
+@keyframes vinheta2 {
+    0% {margin: 0rem 0rem 0rem 40%; opacity: 0%;}
+    40% {margin: 0rem 0rem 0rem 40%; opacity: 0%;}
+    70% {margin: 0rem 0rem 0rem 40%; opacity: 25%;}
+    100% {margin: 0rem 0rem 0rem 40%; opacity: 100%;}
+}
+
+
+#vinheta {
+    opacity: 0%;
+    animation-name: vinheta;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+}
+
+@keyframes vinheta {
+      0% {margin-top:  -1rem; opacity:   0%;}
+     40% {margin-top:  -1rem; opacity:   0%;}
+     70% {margin-top: -.7rem; opacity:  25%;}
+    100% {margin-top:   0rem; opacity: 100%;}
+}
+
+/* .home-text h1 {
+    /* background-color: white; 
+} */
+
+.about {
+    background-color: #3D0B10;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+}
+
+.about-box {
+    margin-top: -3.3rem;
+} 
+
+.deadpool {
+    position: relative;
+    margin-top: .5rem;
+}
+
+.Cborder {
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 0rem;
+    border-radius: 100%;
+    border:#EAC80A 3px solid;
+    overflow: hidden;
+}
+
+.Cborder img {
+    width: 10rem;
+    height: 10rem;
+    max-width: 10rem;
+    max-height: 10rem;
+}
+
+.about-textbox {
+    position: absolute;
+    background-color: white;
+    padding: 1rem 1rem 1rem 8rem;
+    border-radius: 20px;
+    left: 4rem;
+    width: 0%;
+    height: 8.37rem;
+    max-height: 8.37rem;
+    overflow: hidden;
+    opacity: 0;
+
+    transition: all 1s;
+}
+
+.about-textbox-text {
+    opacity: 0;
+    transition: opacity 0.2s;
+    transition-delay: 1s;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.about-textbox-text h1 {
+    color: rgb(130, 130, 130);
+}
+
+.about-coluna {
+    position: relative;
+    display: flex;
+    /* background-color: aqua; */
+    margin: 5rem 0rem 5rem 0rem;
+    width: 100%;
+    gap: 3rem;
+    
+    justify-content: space-evenly;
+    
+}
+
+.about-title {
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(255, 255, 255, 0.683);
+    text-shadow: 2px 2px 2px black;
+}
+
+.image-container {
+    position: relative;
+    width: 10rem; /* Defina a largura desejada */
+    height: 10rem; /* Defina a altura desejada */
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.top-image,
+.bottom-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease; /* Suaviza a transição */
+}
+
+.char-names {
+    font-family: deadpool;
+    text-shadow: 0px 0px 1px white;
+}
+
+.dogpool {
+    z-index: 1000;
+    position: absolute;
+    width: 12rem;
+    right: 0%;
+    margin: 3rem 2rem 0rem 0rem;
+    pointer-events: none;
+
+    -webkit-box-reflect: below 2px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    
+}
+
+.circle {
+    z-index: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+
+    transition: transform 2s linear;
+}
+
+.circle1 {
+    background-color: hsla(58, 100%, 70%, 0.209);
+}
+
+.circle2 {
+    background-color: hsla(0, 100%, 70%, 0.109);
+}
+
+.trailer-assistir-background {
+    background-image: linear-gradient(-45deg, #EAC80A 51.5%, #a31f2a 5%);
+}
+
+.trailer {
+    box-shadow: inset 0px 0px 200px 50px rgb(30, 3, 3, 0.95);
+    height: 44.45rem;
+}
+
+#shadow2 {
+    position: absolute;
+    /* box-shadow: inset 0px 0px 50px 50px #3D0B10; */
+    box-shadow: 0px -40px 15px 50px #3d0b10 ;
+    height: 0rem;
+    width: 100%;
+    z-index: 200;
+}
+
+.trailer-box {
+    display: flex;
+}
+
+.trailer-border {
+    margin-left: calc(50% - 40rem);
+
+    
+}
+
+.trailer-video {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    margin: 7rem 0rem 0rem 7rem;
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.549);
+    border-radius: 20px;
+}
+
+.iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+    transition: z-index 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    
+    pointer-events: none;
+}
+
+.trailer-border-img {
+    position: absolute;
+    width: 700px;
+    height: 393.75px;
+
+    margin: 21rem 0rem 0rem 0rem;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.fakedead {
+    position: absolute;
+    width: 700px;
+    height: 393.75px;
+    opacity: 1;
+    margin: -14.15rem 0rem 0rem 0rem;
+    z-index: 4;
+    transition: opacity 0.3s linear;
+    pointer-events: none;
+}
+
+.wolverine-border {
+    position: absolute;
+    width: 280px;
+    height: 690px;
+    margin: 5rem 0rem 0rem 55rem;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.fakeLogan {
+    position: absolute;
+    width: 280px;
+    height: 690px;
+    opacity: 1;
+    margin: -30.1rem 0rem 0rem 54.95rem;
+    z-index: 4;
+    transition: opacity 0.3s linear;
+    pointer-events: none;
+}
+
+.assistir {
+    position: relative;
+    box-shadow: inset 0px 0px 200px 50px rgba(30, 3, 3, 0.9);
+    padding-top: 4rem;
+    height: 42.45rem;
+    /* background-image: linear-gradient(-45deg, #EAC80A 69.99%, #a31f2a 5%); */
+}
+
+.assistir-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.comprar-button button {
+    font-family: deadpool;
+    font-size: 2rem;
+    color: white;
+    background-color: #a31f2a;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 0px 16px 2px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition: box-shadow .15s linear, background-color .15s linear;
+    cursor: not-allowed;
+
+}
+
+
+  
+.comprar-button button:hover {
+    background-color: hsl(355, 48%, 58%);
+    box-shadow: 0 0px 16px 2px rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.footer {
+    display: flex;
+    color: hsl(0, 0%, 50%);
+    justify-content: center;
+    margin: 2rem 0rem;
+}
+
+.music-textbox {
+    opacity: 0;
+}
+
+.music-textbox-animation {
+    position: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1rem;
+    color: white;
+    background-color: rgba(26, 26, 26, 0.693);
+    z-index: 100000;
+    right: -20%;
+    top: 82%;
+
+    animation: musicAn 5s forwards;
+    animation-delay: 0.85s;
+
+}
+
+@keyframes musicAn {
+    0%   {right: -20%; opacity: 1;}
+    25%  {right:   0%; opacity: 1;}
+    80%  {right:   0%; opacity: 1;}
+    100% {right: -20%; opacity: 1;}
+}
+
+/* SCROLL */
+
+body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    display: none;      /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #EAC80A;   /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #3D0B10;  /* creates padding around scroll thumb */
+  }
+
+  body::-webkit-scrollbar-thumb:active {
+    background-color: hsl(51, 92%, 38%);   /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 5px solid hsl(354, 69%, 13%);  /* creates padding around scroll thumb */
+  }
+
+/* SCROLL END */
+
+
+/* responsivel */
+
+@media (min-width: 1599px) {
+    .home {
+        height: 61rem;
+    }
+
+    .home-img {
+        margin-top: 17rem;
+    }
+    
+    #shadow {
+        top: 17rem;
+    }
+    
+    .about-coluna {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 1168px) {
+    .home-icon img {
+        left: calc(-40%);
+    }
+
+    .home-img {
+        margin-top: 30rem;
+    }
+
+    .home-img img {
+        width: 50rem;
+    }
+
+    .home {
+        padding-bottom: 30rem;
+    }
+
+    .deadpool-logo {
+        position: absolute;
+        left: -35%;
+        top: -2rem;
+    }
+
+    .home-text {
+        font-size: 1.45rem;
+        position: absolute;
+        left: -24%;
+        width: 50%;
+        top: 22rem;
+    }
+
+    #shadow {
+        top: 30rem;
+    }
+
+    .dogpool, .fakeLogan, .wolverine-border, .fakedead {
+        display: none;
+    }
+
+    .trailer-border-img {
+        margin-left: 10rem;
+    }
+
+    .trailer-box {
+        margin-left: 15rem;
+    }
+    
+    .about-coluna {
+        margin-left: 10rem;
+        display: flex;
+        flex-direction: column;
+        width: 10rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .home-icon img {
+        left: calc(-35%);
+    }
+
+    .deadpool-logo {
+        margin-left: -10rem;
+    }
+
+    .trailer-box {
+        transform: scale3d(.8,.8,.8);
+    }
+}
+
+@media (max-width: 673px) {
+    .header-list {
+        display: grid;
+        width: 8rem;
+    }
+
+    .home-icon img {
+        left: calc(-300%);
+    }
+
+    .trailer-border-img {
+        margin-top: -14rem;
+    }
+
+    .trailer-box {
+        transform: scale3d(.7,.7,.7);
+        margin-left: 12.5rem;
+        padding-top: 10rem;
+    }
+}
+
+@media (max-width: 631px) {
+    .deadpool-logo {
+        left: -50%;
+    }
+
+    .home-text {
+        left: -60%;
+        width: 75%;
+    }
+}
+
+@media (max-width: 580px) {
+    .deadpool-logo {
+        left: -60%;
+        transform: scale3d(0.8,0.8,0.8);
+    }
+
+    .home-icon img {
+        left: -13rem;
+    }
+
+    .home-text {
+        left: -60%;
+        width: 75%;
+        top: 18rem;
+        transform: scale3d(0.8,0.8,0.8);
+    }
+
+    .trailer-box {
+        transform: scale3d(.6,.6,.6);
+    }
+}
+
+
+@media (max-width: 450px) {
+    .deadpool-logo {
+        left: -70%;
+        transform: scale3d(0.7,0.7,0.7);
+    }
+
+    .home-icon img {
+        left: -13rem;
+    }
+
+    .home-text {
+        left: -60%;
+        width: 75%;
+        top: 18rem;
+    }
+
+    .trailer-box {
+        transform: scale3d(.6,.6,.6);
+    }
+
+    
+    .home-img {
+        margin-top: 45rem;
+    }
+    
+    .home-img img {
+        width: 30rem;
+    }
+}
